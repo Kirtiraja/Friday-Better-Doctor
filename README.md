@@ -1,32 +1,36 @@
-# _Doctor Who?_
+# _Find Care Now!_
 
-#### _Find doctors and services near you with the Better Doctor Lookup API _
+#### :pill: Find doctors and services near you with the Better Doctor Lookup API
 
-#### By _**Kirtiraja Zakheim **_
+#### By _**Kirtiraja Zakheim**_:squirrel:
 
 ## Description
 
-_This will be a description.
+  Achoo! As we all know, everybody needs to see a doctor sometimes. But finding a doctor that provides the services you need nearby can be time consuming. To facilitate this, we have created a website where users may search for local doctors by name, symptom,  or insurance carrier. Simply search by one or all of these terms to receive a list of doctors in your city!
 
 ## Setup/Installation Requirements
-1. _`$ git clone` [https://github.com/Kirtiraja/Friday-Galacticat](https://github.com/Kirtiraja/Friday-Galacticat)_
+1. _`$ git clone` [https://github.com/Kirtiraja/Friday-Better-Doctor](https://github.com/Kirtiraja/Friday-Better-Doctor)_
 
-2. _`$ cd docotor-lookup`_
+2. _`$ cd doctor-lookup`_
 
 3. _`$ npm install`_
 
-<!-- * Click <a href="https://kirtiraja.github.io/Friday-Galacticat"> HERE </a>to see website. -->
+4. :rocket: Visit [https://developer.betterdoctor.com](https://developer.betterdoctor.com) to create an account and obtain *Practice Search* API key.
+
+5.  _`$ touch .env`_   -create file in root directory and save key in following format:"API_KEY:**enter your key here**"
+6.  _`$ npm run start`_
+
 
 ## Specifications
 
 | Behavior: | Input Example: | Output Example: |
 | - | - | - |
 |if user inputs medical issue program returns list of doctors in the Portland  |"rash"|"Portland Dermatology,"|
-||
-|A user should be able to enter a name to receive a list of doctors in the Portland area that fit the search query.|"William"|"William Ray, MD. accepting new patients,830 Scenic Dr., 95350, Modesto, CA, 209-543-6280, www.suttergould.org"
-|Returns user's age in Mars years|"38"|"20"|
-|Returns user's age in Jupiter years|"38"|"3"|
-|Takes user's average expected lifespan and returns how many years left to live on specified planet|"38"|"213 years left"|
+|A user should be able to enter a name to receive a list of doctors in the Portland area that fit the search query.|"William"|"William Ray, MD.William Cahilll,MD"
+|If the query response includes any doctors, the following information should be included about each doctor: first name, last name, address, phone number, website and whether or not the doctor is accepting new patients |"William"|"William Ray, MD. accepting new patients,830 Scenic Dr., 95350, Modesto, CA, 209-543-6280, www.suttergould.org"
+|f the API call results in an error (any message not a 200 OK), the application should return a notification that states what the error is|""|"There was an error handling your request: " + error.message|
+|If the query response doesn't include any doctors (for instance, if no doctors meet the search criteria), the application should return a notification that states that no doctors meet the criteria. |"Dr. Who"|"Sorry, no doctors match: 'Dr. Who' search criteria, please use another search term."" |
+||||
 ||||
 
 
@@ -49,6 +53,7 @@ _Feel free to contact me at kirtiraja@gmail.com if you have any questions._
 * Webpack
 * Lint
 * Jest
+* Better Doctor API
 
 
 ### License
