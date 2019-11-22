@@ -23,7 +23,7 @@ _This will be a description.
 | - | - | - |
 |if user inputs medical issue program returns list of doctors in the Portland  |"rash"|"Portland Dermatology,"|
 ||
-|Returns user's age in Venus years|"38"|"61"
+|A user should be able to enter a name to receive a list of doctors in the Portland area that fit the search query.|"William"|"William Ray, MD. accepting new patients,830 Scenic Dr., 95350, Modesto, CA, 209-543-6280, www.suttergould.org"
 |Returns user's age in Mars years|"38"|"20"|
 |Returns user's age in Jupiter years|"38"|"3"|
 |Takes user's average expected lifespan and returns how many years left to live on specified planet|"38"|"213 years left"|
