@@ -9,15 +9,14 @@ $(document).ready(function() {
 
   // TAKES USER INPUT SYMPTOM SEARCH AND HOLD TO VARIABLE
   $('#name').click(function() {
-    const userInputtedName = $('#nameInput').val();
-
+    // const userInputtedName = $('#nameInput').val();
 
 
     // THIS WILL CALL THE PracticeSearch API FUNCTION
     (async () => {
       let practiceSearch = new PracticeSearch();
-      const response = await practiceSearch.getPracticeByName(userInputtedName);
-
+      const response = await practiceSearch.getPracticeByName();
+      console.log(response);
       getElements(response);
     })();
 
@@ -25,9 +24,8 @@ $(document).ready(function() {
 
     // THIS WILL DISPLAY API FUNCTION RETURN ON (DOM)
     function getElements(response) {
-      $(".showDoctorList").append(`${response.data[0].name}`);
-      // $('.showAddress').text(`who lives at ${response.current_addresses[0].street_line_1} ${response.current_addresses[0].city}`);
-      // $('.showYourPeeps').text(`your peeps be: ${response.associated_people[0].name}, ${response.associated_people[1].name}, ;
+      $(".showDoctorList").text(`${response.data}`);
+    console.log(jsonifiedResponse);
     }
   });
 });
