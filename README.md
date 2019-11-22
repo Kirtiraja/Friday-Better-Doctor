@@ -28,7 +28,7 @@
 |if user inputs medical issue program returns list of doctors in the Portland  |"rash"|"Portland Dermatology,"|
 |A user should be able to enter a name to receive a list of doctors in the Portland area that fit the search query.|"William"|"William Ray, MD.William Cahilll,MD"
 |If the query response includes any doctors, the following information should be included about each doctor: first name, last name, address, phone number, website and whether or not the doctor is accepting new patients |"William"|"William Ray, MD. accepting new patients,830 Scenic Dr., 95350, Modesto, CA, 209-543-6280, www.suttergould.org"
-|f the API call results in an error (any message not a 200 OK), the application should return a notification that states what the error is|""|"There was an error handling your request: " + error.message|
+|If the API call results in an error (any message not a 200 OK), the application should return a notification that states what the error is|""|"There was an error handling your request: " + error.message|
 |If the query response doesn't include any doctors (for instance, if no doctors meet the search criteria), the application should return a notification that states that no doctors meet the criteria. |"Dr. Who"|"Sorry, no doctors match: 'Dr. Who' search criteria, please use another search term."" |
 ||||
 ||||
