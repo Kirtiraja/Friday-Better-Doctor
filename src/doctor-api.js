@@ -12,3 +12,8 @@ export class PracticeSearch {
     }
   }
 }
+
+// export class DoctorDetails{
+//   constructor()
+// } = function () {
+  // body...
