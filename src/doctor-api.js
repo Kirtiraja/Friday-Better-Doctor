@@ -8,6 +8,7 @@ export class PracticeSearch {
       // alert("sorry, no doctors match your search criteria");
       console.error("There was an error handling your request: " + error.message);
 
+
     }
   }
 }

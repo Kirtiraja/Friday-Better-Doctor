@@ -1,6 +1,4 @@
 import { PracticeSearch } from './../src/doctor-api.js';
-import { setIntervalAsync } from 'set-interval-async/dynamic';
-import { clearIntervalAsync } from 'set-interval-async';
 import $ from 'jquery';
 import 'bootstrap';
 import './styles.css';
@@ -8,16 +6,12 @@ import './styles.css';
 
 
 $(document).ready(function() {
-
-  // TAKES USER INPUT SYMPTOM SEARCH AND HOLD TO VARIABLE
-  $('#name').submit(function() {
+  $('#userSearch').click(function(event) {
+    event.preventDefault();
     const userInputtedName = $('#nameInput').val();
-
-
-    // THIS WILL CALL THE PracticeSearch API FUNCTION
     (async () => {
       let practiceSearch = new PracticeSearch();
-      const response = await practiceSearch.getPracticeByName();
+      const response = await practiceSearch.getPracticeByName(userInputtedName);
       getElements(response);
     })();
 
@@ -28,5 +22,4 @@ $(document).ready(function() {
 
     }
   });
-  console.log("here is your object");
 });
