@@ -18,7 +18,7 @@ $(document).ready(function() {
 
     // THIS WILL DISPLAY API FUNCTION RETURN ON (DOM)
     function getElements(response) {
-      $("#showDoctorList").text(`your search results: ${response.data[0].name}`);
+      $("#showDoctorList").append(`<li>${response.data[0].name} ${response.data[0].accepts_new_patients} <li>${response.data[1].name}<li>`);
 
     }
   });
