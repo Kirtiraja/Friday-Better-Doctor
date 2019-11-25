@@ -1,5 +1,5 @@
 import { PracticeSearch } from './../src/doctor-api.js';
-import { CondtionSearch } from './../src/doctor-api.js';
+// import { CondtionSearch } from './../src/doctor-api.js';
 import $ from 'jquery';
 import 'bootstrap';
 import './styles.css';
@@ -17,15 +17,15 @@ $(document).ready(function() {
     })();
 
 
-    $('#userConditionSearch').click(function(event) {
-      event.preventDefault();
-      const userInputtedCondtion = $('#ConditionInput').val();
-      (async () => {
-        let conditionSearch = new ConditionSearch();
-        const conditionResponse = await conditionSearch.getPracticeByCondition(userInputtedCondition);
-        getElements2(conditionResponse);
-        console.log("condition" conditionResponse);
-      })();
+    // $('#userConditionSearch').click(function(event) {
+    //   event.preventDefault();
+    //   const userInputtedCondtion = $('#ConditionInput').val();
+    //   (async () => {
+    //     let conditionSearch = new ConditionSearch();
+    //     const conditionResponse = await conditionSearch.getPracticeByCondition(userInputtedCondition);
+    //     getElements2(conditionResponse);
+    //     console.log("condition" conditionResponse);
+    //   })();
 
 
       // THIS WILL DISPLAY API FUNCTION RETURN ON (DOM)
@@ -37,9 +37,9 @@ $(document).ready(function() {
 
       }
 
-      function getElements2(conditionResponse) {
-        $("#condition1").text(`${conditionResponse.data[0].name}  ${conditionResponse.data[0].phones[0].number} ${conditionResponse.data[0].visit_address.street}  ${conditionResponse.data[0].visit_address.city} ${conditionResponse.data[0].visit_address.state} ${conditionResponse.data[0].visit_address.zip} ${conditionResponse.data[0].accepts_new_patients}${conditionResponse.data[0].website}`);
-      }
+      // function getElements2(conditionResponse) {
+      //   $("#condition1").text(`${conditionResponse.data[0].name}  ${conditionResponse.data[0].phones[0].number} ${conditionResponse.data[0].visit_address.street}  ${conditionResponse.data[0].visit_address.city} ${conditionResponse.data[0].visit_address.state} ${conditionResponse.data[0].visit_address.zip} ${conditionResponse.data[0].accepts_new_patients}${conditionResponse.data[0].website}`);
+      // }
     });
   });
-});
+// });
